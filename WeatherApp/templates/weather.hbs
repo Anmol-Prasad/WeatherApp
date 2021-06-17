@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍃 Weather App </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="backgrounds">
+        <div class="title">🍃 b r e e z e </div>
+        <div id="tempinfo">
+            <form class="toplayer">
+                <input type="text" id="cityname" placeholder="ENTER CITY NAME">
+                {{!-- <input type="submit" id="city_search"> --}}
+                <button type="submit" id="city_search"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="toplayer">
+                <div id="date">14 July</div>
+                <div id="week">Day</div>
+            </div>
+            <div class="datahide">
+                <div class="toplayer">
+                    <div id="temp">0</div>
+                    <div id="degree">&#8451</div>
+                </div>
+                <div class="toplayer">
+                    <div id="mintemp">0</div>
+                    <div id="maxtemp">0</div>
+                </div>
+                <div class="toplayer">
+                    <div id="citynameoutput">City</div>
+
+                </div>
+                <div class="toplayer">
+                    <div id="temppic">⛅</div>
+                    <div id="windspeed">Info</div>
+
+                </div>
+                <div class="toplayer">
+                    <div id="speed">Wind</div>
+                    <div id="direction">Dir</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="background">
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

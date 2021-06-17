@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.title {
+  font-weight: 900;
+  text-align: center;
+  padding: 20px 0px;
+  width: 100%;
+  align-items: center;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 42.5px;
+  color: black;
+  font-weight: 500;
+  margin-bottom: 150px;
+  backdrop-filter: blur(6.75px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+}
+.section {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-45deg, #23a, #e73c7e, #ee7752);
+}
+
+.box {
+  position: relative;
+}
+.comma {
+  font-size: 120px;
+  height: 52px;
+  /* border: 2px solid black; */
+  padding-left: 20px;
+}
+#quote {
+  /* border: 1px solid black; */
+  padding-top: 45px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 30px;
+  font-family: "Lucida Calligraphy";
+}
+#author {
+  /* border: 2px solid black; */
+  text-align: center;
+  float: right;
+  font-size: 35px;
+  margin-right: 30px;
+  margin-top: 62px;
+  font-family: "Dancing Script", cursive;
+}
+
+.box .square {
+  position: absolute;
+  backdrop-filter: blur(6.5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 6.5s linear infinite;
+  animation-delay: calc(-1.5s * var(--i));
+  border-radius: 20px;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(450px);
+  }
+  50% {
+    transform: translateY(40px);
+    transform: rotate(180deg);
+  }
+}
+.box .square:nth-child(4) {
+  top: -200px;
+  right: 300px;
+  width: 200px;
+  height: 200px;
+}
+
+.box .square:nth-child(2) {
+  top: -175px;
+  left: 300px;
+  width: 150px;
+  height: 150px;
+}
+
+.box .square:nth-child(3) {
+  top: -250px;
+  right: 300px;
+  width: 50px;
+  height: 50px;
+}
+.box .square:nth-child(1) {
+  top: -150px;
+  left: 60px;
+  width: 100px;
+  height: 100px;
+}
+
+.box .square:nth-child(5) {
+  top: -100px;
+  right: 60px;
+  width: 100px;
+  height: 100px;
+}
+.box .square:nth-child(6) {
+  top: -100px;
+  left: 200px;
+  width: 70px;
+  height: 70px;
+}
+.container {
+  position: relative;
+  margin: auto;
+  width: 400px;
+  height: 370px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 35px;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+}
+
+#NewQuote {
+  color: #666;
+  height: 57.5px;
+  margin-top: 52px;
+  width: 100%;
+  background-image: linear-gradient(white);
+  border: 0.5px solid white;
+  border-bottom-right-radius: 35px;
+  border-bottom-left-radius: 35px;
+  font-family: "Dancing Script", cursive;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 27.5px;
+}

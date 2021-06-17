@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class='section'>
+        <div class="title">👑 QUOTE GENERATOR 👑</div>
+        <div class="box">
+            <div class="square" style="--i:5"></div>
+            <div class="square" style="--i:1"></div>
+            <div class="square" style="--i:2"></div>
+            <div class="square" style="--i:3"></div>
+            <div class="square" style="--i:4"></div>
+            <div class="square" style="--i:6"></div>
+
+            <div class="container">
+                <div class="comma">"</div>
+                <div id="quote">Quote</div>
+                <div id="author">Author</div>
+                <button id='NewQuote'>New Quote</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const quote = document.getElementById('quote')
+        const author = document.getElementById('author')
+        const NewQuote = document.getElementById('NewQuote')
+        let readabledata = ""
+
+        const getQuotesRandom = () => {
+            const randnum = Math.floor(Math.random() * 1600);
+            quote.innerText = `${readabledata[randnum].text}`;
+            readabledata[randnum].author == null ? (author.innerText = "~Anonymous") : (author.innerText = `~ ${readabledata[randnum].author}`)
+        }
+
+
+        const getQuotes = async () => {
+            const api = 'https://type.fit/api/quotes'
+            try {
+                let data = await fetch(api)
+                readabledata = await data.json()
+                getQuotesRandom();
+            }
+            catch (error) {
+                console.log(" Sorry Can't get data 💔")
+            }
+        }
+        getQuotes();
+
+        NewQuote.addEventListener('click', getQuotes)
+
+    </script>
+
+</body>
+
+</html>
