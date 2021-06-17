@@ -4,7 +4,7 @@ const path = require("path");
 const hbs = require("hbs");
 const port = process.env.port || 8000;
 
-const templatepath = path.join(__dirname, "../templates");
+const templatepath = path.join(__dirname, "../templates/views");
 const partialspath = path.join(__dirname, "../templates/partials");
 
 app.set("view engine", "hbs");
