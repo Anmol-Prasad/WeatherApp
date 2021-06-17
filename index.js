@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const hbs = require("hbs");
-const port = process.env.port || 8000;
+const port = process.env.port || 3000;
 
 const templatepath = path.join(__dirname, "WeatherApp/templates/views");
 const partialspath = path.join(__dirname, "WeatherApp/templates/partials");
