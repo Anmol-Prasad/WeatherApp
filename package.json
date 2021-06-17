@@ -2,10 +2,10 @@
   "name": "weatherapp",
   "version": "1.0.0",
   "description": "Most Advanced Weather App",
-  "main": "WeatherApp/src/app.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node WeatherApp/src/app.js -e hbs,js"
+    "start": "node WeatherApp/app.js -e hbs,js"
   },
   "author": "Anmol Prasad",
   "license": "ISC",
