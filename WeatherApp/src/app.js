@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const hbs = require("hbs");
+const port = process.env.port || 8000;
 
 const templatepath = path.join(__dirname, "../templates");
 const partialspath = path.join(__dirname, "../templates/partials");
@@ -27,6 +28,6 @@ app.get("/weather", (req, res) => {
 app.get("*", (req, res) => {
   res.render("error");
 });
-app.listen(8000, (err) => {
+app.listen(port, (err) => {
   console.log("App working on 8000 💗💗");
 });
