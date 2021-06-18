@@ -61,7 +61,7 @@ select:focus {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 125vh;
   width: 100%;
 }
 #tempinfo {
